@@ -93,11 +93,16 @@ CHART_H = 340
 LAYOUT = dict(margin=dict(l=10, r=10, t=10, b=10), height=CHART_H)
 
 # -----------------------------
-# Judul
+# Judul & Deskirpsi
 # -----------------------------
 with st.container(border=True):
     st.markdown(
         "<h1 style='text-align:center;margin:0'>DASHBOARD PERFORMA SISWA</h1>",
+        unsafe_allow_html=True,
+    )
+    st.markdown(
+        "<p style='text-align:center;margin:0'>Dashboard ini menampilkan performa akademik siswa "
+        "berdasarkan jam belajar, kehadiran, jam tidur, dan latar belakang pendidikan orang tua siswa.</p>",
         unsafe_allow_html=True,
     )
 
@@ -126,7 +131,7 @@ with k3, st.container(border=True):
 
 
 # -----------------------------
-# Study Time vs Final Grade
+# Study Time vs Final Exam Score
 # -----------------------------
 with st.container(border=True):
     st.subheader("Study Time vs Final Exam Score")
